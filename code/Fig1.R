@@ -407,4 +407,3 @@ p_yield_final <- ggarrange(top_row, bottom_row,
 print(p_yield_final)
 
 
-

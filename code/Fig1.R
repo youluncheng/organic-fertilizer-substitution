@@ -44,7 +44,7 @@ plotdata<-data.frame(Treatment,mean,sd,marker)
 plotdata
 
 # Create a vector to specify the new Treatment order
-new_order <- c("CK", "O1", "O2", "O3", "O4", "F1", "F2", "F3", "F4")
+new_order <- c("CK", "O1", "F1", "O2", "F2", "O3", "F3", "O4", "F4")
 
 # Convert Treatment to factor and reorder by the new order
 plotdata <- plotdata %>%
@@ -130,7 +130,7 @@ marker<-sort$mar.groups
 plotdata<-data.frame(Treatment,mean,sd,marker)
 plotdata
 
-new_order <- c("CK", "O1", "O2", "O3", "O4", "F1", "F2", "F3", "F4")
+new_order <- c("CK", "O1", "F1", "O2", "F2", "O3", "F3", "O4", "F4")
 
 plotdata <- plotdata %>%
   mutate(Treatment = factor(Treatment, levels = new_order)) %>%
@@ -210,7 +210,7 @@ marker<-sort$mar.groups
 plotdata<-data.frame(Treatment,mean,sd,marker)
 plotdata
 
-new_order <- c("CK", "O1", "O2", "O3", "O4", "F1", "F2", "F3", "F4")
+new_order <- c("CK", "O1", "F1", "O2", "F2", "O3", "F3", "O4", "F4")
 
 plotdata <- plotdata %>%
   mutate(Treatment = factor(Treatment, levels = new_order)) %>%
@@ -405,5 +405,6 @@ p_yield_final <- ggarrange(top_row, bottom_row,
                            heights = c(2.2, 1.3)) 
 
 print(p_yield_final)
+
 
 
